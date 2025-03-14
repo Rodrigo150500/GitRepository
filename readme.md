@@ -13,3 +13,5 @@ git commit - Envia os arquivos
 git pull - Puxa os arquivos do Github para estar sincronizado
 
 git push - Envia os arquivos para o Github
+
+git clone - Faz a clonagem do repositório
