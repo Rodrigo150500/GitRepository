@@ -1,17 +1,46 @@
-# Comandos principais do Git
+# 🛠️ Comandos Principais do Git
 
-git init - Inicializa o git na pasta
+## Configuração e Inicialização
+- **`git init`** – Inicializa um repositório Git na pasta atual.
+- **`git clone <url>`** – Clona um repositório remoto para a máquina local.
+- **`git config --global user.name "Seu Nome"`** – Define o nome do usuário globalmente.
+- **`git config --global user.email "seu@email.com"`** – Define o e-mail do usuário globalmente.
 
-git checkout ou git switch - Troca de branch ou volta para uma versão anterior do arquivo
+## 📂 Trabalho com Branches
+- **`git branch`** – Lista as branches no repositório.
+- **`git branch <nome>`** – Cria uma nova branch.
+- **`git switch <branch>`** – Alterna para outra branch (substitui `git checkout <branch>`).
+- **`git merge <branch>`** – Mescla a branch especificada na branch atual.
+- **`git rebase <branch>`** – Aplica os commits da branch atual sobre outra branch, reorganizando o histórico.
+- **`git branch -d <branch>`** – Deleta uma branch local.
+- **`git push origin --delete <branch>`** – Deleta uma branch remota.
 
-git restore - Restaura arquivos modificados para seu último estado salvo no repositório (ou no índice, dependendo da opção usada).
+## 📌 Adicionando e Confirmando Alterações
+- **`git status`** – Mostra o status atual dos arquivos no repositório.
+- **`git add <arquivo>`** – Adiciona um arquivo específico para ser commitado.
+- **`git add .`** – Adiciona todos os arquivos modificados.
+- **`git commit -m "mensagem"`** – Cria um commit com a mensagem especificada.
+- **`git commit --amend`** – Edita o último commit (útil para corrigir mensagens ou adicionar arquivos esquecidos).
 
-git add - Adiciona os arquivos prontos para serem commitados
+## 🔄 Sincronização com o Repositório Remoto
+- **`git remote -v`** – Lista os repositórios remotos configurados.
+- **`git push origin <branch>`** – Envia os commits da branch local para o repositório remoto.
+- **`git pull origin <branch>`** – Baixa as mudanças do repositório remoto e mescla com a branch local.
+- **`git fetch`** – Baixa as mudanças do repositório remoto sem mesclar automaticamente.
 
-git commit - Envia os arquivos
+## 🔙 Revertendo Alterações
+- **`git restore <arquivo>`** – Restaura um arquivo modificado para sua última versão commitada.
+- **`git reset --soft HEAD~1`** – Remove o último commit, mantendo as mudanças no staging.
+- **`git reset --hard HEAD~1`** – Remove o último commit e descarta todas as mudanças.
+- **`git revert <commit>`** – Cria um novo commit desfazendo as alterações de um commit específico.
 
-git pull - Puxa os arquivos do Github para estar sincronizado
+## 🏷️ Tags e Versões
+- **`git tag <versão>`** – Cria uma nova tag de versão.
+- **`git tag -d <versão>`** – Deleta uma tag local.
+- **`git push origin --tags`** – Envia todas as tags para o repositório remoto.
 
-git push - Envia os arquivos para o Github
-
-git clone - Faz a clonagem do repositório
+## 🔍 Logs e Histórico
+- **`git log`** – Exibe o histórico de commits.
+- **`git log --oneline`** – Exibe o histórico de commits em uma única linha por commit.
+- **`git blame <arquivo>`** – Mostra quem modificou cada linha de um arquivo e em qual commit.
+- **`git diff`** – Mostra as diferenças entre arquivos modificados e a última versão commitada.
